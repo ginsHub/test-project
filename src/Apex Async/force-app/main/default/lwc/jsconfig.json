@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/addCoffeePeople": [
+                "addCoffeePeople/addCoffeePeople.js"
+            ],
+            "c/coffeePerson": [
+                "coffeePerson/coffeePerson.js"
+            ],
+            "c/displayCoffeeCreatively": [
+                "displayCoffeeCreatively/displayCoffeeCreatively.js"
+            ],
+            "c/miscModal": [
+                "miscModal/miscModal.js"
+            ],
+            "c/paginator": [
+                "paginator/paginator.js"
+            ],
+            "c/searchCoffeeUsingPerson": [
+                "searchCoffeeUsingPerson/searchCoffeeUsingPerson.js"
+            ],
+            "c/searchPersonWithSameCoffeeAndAttribute": [
+                "searchPersonWithSameCoffeeAndAttribute/searchPersonWithSameCoffeeAndAttribute.js"
+            ],
+            "c/updateDelete": [
+                "updateDelete/updateDelete.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

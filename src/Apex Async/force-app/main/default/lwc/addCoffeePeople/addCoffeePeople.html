@@ -1,0 +1,16 @@
+<template>
+        <lightning-card title="Add People and Their Favourite Coffee">
+                        <lightning-input class="slds-m-bottom_small" name="name" onchange={handleName} label="Name" value={name}></lightning-input>
+                        <lightning-input class="slds-m-bottom_small" name="attribute1" onchange={handleAtt1} label="Attribute 1" value={attribute1}></lightning-input>
+                        <!-- <lightning-input class="slds-m-bottom_small" name="coffee" onchange={handleCoffee} label="Coffee" value={coffee}></lightning-input> -->
+                        <template if:true={coffeePicklistValue.data}>
+                        <lightning-combobox name="coffee" label="Coffee" value={coffee} placeholder="-Select-" options={coffeePicklistValue.data.values} onchange={handleCoffee}></lightning-combobox>
+                        </template>
+                        <lightning-input class="slds-m-bottom_small" name="attribute2" onchange={handleAtt2} label="Attribute 2" value={attribute2}></lightning-input>
+                        <lightning-button class="slds-m-top_small" onclick={handleSubmit} label="Create new"></lightning-button>
+                        <lightning-button class="slds-m-top_small" onclick={handleCancel} label="Cancel"></lightning-button>
+                <div>
+                </div>
+        </lightning-card>
+    </template>
+        

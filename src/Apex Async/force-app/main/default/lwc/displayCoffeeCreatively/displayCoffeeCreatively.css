@@ -1,0 +1,26 @@
+.long-black{
+    margin: 8 0 0 0;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.almond{
+    margin: 8 0 0 0;
+}
+
+.skinny{
+    margin: 8 0 0 0;
+}
+
+.flat-white{
+    margin: 8 0 0 0;
+    font-size: small;
+    color: white;
+    text-shadow: black;
+    font-weight: bold;
+
+}
+
+.extra-hot{
+    margin: 8 0 0 0; 
+}

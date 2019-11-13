@@ -1,0 +1,24 @@
+.long-black{
+    margin: 8 0 0 0;
+    font-stretch: ultra-expanded;
+    letter-spacing: 10px;
+    font-weight: bolder;
+}
+
+.almond{
+    margin: 8 0 0 0;
+}
+
+.skinny{
+    letter-spacing: 1pxpx;
+    margin: 8 0 0 0;
+    
+}
+
+.flat-white{
+    margin: 8 0 0 0;
+}
+
+.extra-hot{
+    margin: 8 0 0 0; 
+}
