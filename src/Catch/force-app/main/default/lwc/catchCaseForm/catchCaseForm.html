@@ -1,0 +1,87 @@
+<template>
+    <c-formlette track-touch visibility-state={visibilities} config={departmentConfig} name="department">
+        <lightning-combobox
+            class="formlette-input" 
+            label="Select Department" 
+            placeholder="Select a department..."
+            value={values.department}
+            options={deptOptions}
+            onchange={handleDeptChange}
+            required>
+        </lightning-combobox>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={standardCatchConfig} name="subOption" > 
+        <lightning-combobox
+            class="formlette-input" 
+            label="How Can We Help?" 
+            placeholder="Select a topic..."
+            value={values.subOption}
+            options={getSubOptions}
+            required>
+        </lightning-combobox>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={otherConfig} name="other">
+            <lightning-input
+                class="formlette-input"
+                type="text"
+                label="Other"
+                required>
+            </lightning-input>
+        </c-formlette>    
+    <c-formlette track-touch visibility-state={visibilities} config={nameConfig} name="name">
+        <lightning-input
+            class="formlette-input"
+            type="text"
+            label="Name"
+            required>
+        </lightning-input>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={phoneConfig} name="phoneNumber">
+            <lightning-input
+                class="formlette-input"
+                type="tel"
+                label="Phone Number"
+                pattern="+61-[0-9]{4}-[0-9]-4"
+                placeholder="+61-xxxx-xxxx">
+                <!-- onfocusout={handleTouched} -->
+                <!-- onchange={handleValueChanged} -->
+            </lightning-input>
+        </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={standardCatchConfig} name="catchEmail">
+        <lightning-input
+            class="formlette-input"
+            type="email"
+            label="Your email address"
+            required>
+            <!-- onfocusout={handleTouched} -->
+            <!-- onchange={handleValueChanged} -->
+        </lightning-input>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={productNameConfig} name="productName">
+        <lightning-input
+            class="formlette-input"
+            type="text"
+            label="Product Name"
+            required>
+        </lightning-input>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={orderNumberConfig} name="orderNumber">
+        <lightning-input
+            class="formlette-input"
+            type="text"
+            label="Order Number"
+            required>
+        </lightning-input>
+    </c-formlette>
+    <c-formlette track-touch visibility-state={visibilities} config={standardCatchConfig} name="moreInfo">
+        <lightning-textarea
+            class="formlette-input"
+            label="More Information"
+            placeholder="Please tell us more about your concern..."
+            required>
+        </lightning-textarea>
+    </c-formlette>    
+    <div class="slds-p-vertical_small">
+        <lightning-button label="Submit" variant="brand" onclick={handleSubmit}></lightning-button>
+    </div>
+</template>

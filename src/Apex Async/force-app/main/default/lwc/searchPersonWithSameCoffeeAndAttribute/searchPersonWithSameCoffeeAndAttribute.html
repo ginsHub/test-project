@@ -1,0 +1,15 @@
+<template>
+        <lightning-card title="Search People with Same Coffee And/Or Attribute">
+                <div class="slds-m-around_medium">
+                    <lightning-input type="search" class="slds-m-bottom_small" label="Attribute 1" value={attribute1} name="attribute1" onchange={handleAtt1}></lightning-input>
+                    <lightning-input type="search" class="slds-m-bottom_small" label="Coffee" value={coffee} name="coffee" onchange={handleCoffee}></lightning-input>
+                    <lightning-input type="search" class="slds-m-bottom_small" label="Attribute 2" value={attribute2} name="attribute2" onchange={handleAtt2}></lightning-input>
+                    <template if:true={personCoffee.data}>
+                            <template for:each={personCoffee.data} for:item="pc">
+                                <p key={pc.Id}>{pc.Name__c} likes {pc.Attribute1__c} {pc.Coffee__c} {pc.Attribute2__c}</p>
+                            </template>
+                    </template>        
+                </div>
+        </lightning-card>
+    </template>
+        

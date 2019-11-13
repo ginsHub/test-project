@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Display All People's Coffee Creatively" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={coffeePeople.data}>
+                <template for:each={coffeePeople.data} for:item="cp">
+                    <div key={cp.Id}>
+                        <c-coffee-person coffee-person={cp}></c-coffee-person>
+                    </div>
+                </template>
+            </template>
+            <template if:true={coffeePeople.error}>
+                   <!-- <c-error-panel errors={coffeePeople.error}></c-error-panel>-->
+                   <p>MAY ERROR SA LWC MO</p>
+            </template>  
+         </div>
+    </lightning-card>
+</template>       
+<!--        <recipe-view-source source="recipe/helloForEach" slot="footer">
+            Loop through an array of items in a template.
+        </recipe-view-source>
+-->        

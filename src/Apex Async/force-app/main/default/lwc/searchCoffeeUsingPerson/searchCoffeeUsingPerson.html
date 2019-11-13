@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search Coffee using a Person's Name">
+            <div class="slds-m-around_medium">
+                <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>
+                <template if:true={personCoffee.data}>
+                        <template for:each={personCoffee.data} for:item="pc">
+                            <p key={pc.Id}>{pc.Name__c} likes {pc.Attribute1__c} {pc.Coffee__c} {pc.Attribute2__c}</p>
+                        </template>
+                </template>
+              <!-- <template if:true={personCoffee.error}>
+                        <template for:each={personCoffee.error} for:item="message">
+                            <p key={message} class="error-message">{message}</p>
+                        </template>
+                </template>-->           
+            </div>
+    </lightning-card>
+</template>
+    
